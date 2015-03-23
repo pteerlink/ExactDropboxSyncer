@@ -27,7 +27,7 @@ namespace ExactDropboxSyncer.UI
 
 	    public string GetAccessToken()
 		{
-            var oauth = new OAuthClient(authorizationServerDescription, clientId, clientSecret, new Uri(@"http://localhost/oauth2callback"));
+            var oauth = new OAuthClient(authorizationServerDescription, clientId, clientSecret, new Uri(@"http://localhost:12345/oauth2callback"));
             oauth.Authorize(ref state, null);
             return state.AccessToken;
 		}

@@ -20,7 +20,7 @@ namespace ExactDropboxSyncer.UI
 
 	    public string GetAccessToken()
 		{
-            UserAuthorizations.Authorize(userAuthorisation, website, clientId, clientSecret, new Uri(@"http://localhost/oauth2callback"));
+            UserAuthorizations.Authorize(userAuthorisation, website, clientId, clientSecret, new Uri(@"http://localhost:12345/oauth2callback"));
             return userAuthorisation.AccessToken;
 		}
 	}
